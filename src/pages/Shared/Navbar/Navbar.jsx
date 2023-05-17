@@ -5,22 +5,21 @@ import { useState } from "react";
 
 
 const Navbar = () => {
-   const [logOut, user] = useState([true])
+   const [user, setUser] = useState([true])
+
    const handleLogout = () => {
-      logOut()
-         .then(() => {
-            localStorage.removeItem('car-access-token')
-         })
-         .catch(error => console.error(error.message))
+      console.log('ok')
    }
 
    const navItems = <div className="flex flex-col lg:flex-row gap-3">
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
-      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>About</Link> </div>
+
       {user?.email ?
          <>
             <div onClick={handleLogout} className="hover:bg-red-500 hover:text-white p-1 hover:rounded "> <Link to='/'>logout</Link> </div>
             <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/bookings'>My Bookings</Link> </div>
+
+
          </>
          : <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/login'>Login</Link> </div>}
    </div>
@@ -52,9 +51,21 @@ const Navbar = () => {
             </ul>
          </div>
 
-         <div className="navbar-end">
-            <button className="btn btn-outline btn-warning">Appoinment</button>
-         </div>
+         {user &&
+            <> <li tabIndex={0}>
+               <a>
+                  <label tabIndex={0} className="avatar">
+                     <div className="w-6 rounded-full">
+                        <img src={user && user?.photoURL} />
+                     </div>
+                  </label>
+               </a>
+
+               <ul className="text-sm bg-base-100 ">
+                  <li className=''><a><small>{user && user?.displayName}</small></a></li>
+               </ul>
+            </li>
+            </>}
       </div>
    );
 };
