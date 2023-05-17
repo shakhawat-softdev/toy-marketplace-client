@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import navLogo from '../../../../public/images/siteLogo/toy-kingdom.jpg'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 
 const Navbar = () => {
-   const [user, setUser] = useState([true])
+   const { user, logout } = useContext(AuthContext)
 
    const handleLogout = () => {
-      console.log('ok')
+      logout()
+         .then(result => { })
+         .catch()
    }
-
    const navItems = <div className="flex flex-col lg:flex-row gap-3">
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>All Toys</Link> </div>
