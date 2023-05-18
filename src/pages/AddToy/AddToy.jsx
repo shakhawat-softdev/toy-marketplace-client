@@ -1,15 +1,10 @@
 import { useState } from "react";
 
 const AddToy = () => {
-
-
    const [value, setValue] = useState('');
-
    const handleChange = (e) => {
       setValue(e.target.value);
    };
-
-   console.log(value)
 
    const handleAddToy = (event) => {
       event.preventDefault();
@@ -25,8 +20,9 @@ const AddToy = () => {
 
       const toyInfo = { sellerName, email, toyName, category, toyImgUrl, price, details, rating }
       console.log(toyInfo);
-   }
 
+
+   }
    return (
       <>
          <h1 className='text-3xl mt-3 text-center' ><span>Add</span><span className='font-bold'> Toy</span></h1>
