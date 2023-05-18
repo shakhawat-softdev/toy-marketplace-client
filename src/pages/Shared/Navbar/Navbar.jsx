@@ -13,16 +13,12 @@ const Navbar = () => {
          .then(result => { })
          .catch()
    }
-   const navItems = <div className="flex flex-col lg:flex-row gap-3">
+   const navItems = <div className="flex flex-col lg:flex-row gap-3 text-lg">
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>All Toys</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>My Toys</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Add A Toy</Link> </div>
-      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Blogs</Link> </div>
-
-
-      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/login'>Login</Link> </div>
-      <div onClick={handleLogout} className="hover:bg-red-500 hover:text-white p-1 hover:rounded "> <Link to='/'>logout</Link> </div>
+      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/blog'>Blogs</Link> </div>
    </div>
 
 
@@ -53,21 +49,26 @@ const Navbar = () => {
                </ul>
             </div>
 
-            {user &&
-               <> <li tabIndex={0} className="mx-2">
-                  <a>
-                     <label tabIndex={0} className="avatar">
-                        <div className="w-6 rounded-full">
-                           <img src={user && user?.photoURL} />
-                        </div>
-                     </label>
-                  </a>
+            <ul className="menu menu-horizontal">
+               {user &&
+                  <> <li tabIndex={0} className="mx-2">
+                     <a>
+                        <label tabIndex={0} className="avatar">
+                           <div className="w-6 rounded-full">
+                              <img src={user && user?.photoURL} />
+                           </div>
+                        </label>
+                     </a>
 
-                  <ul className="text-sm bg-base-100 ">
-                     <li className=''><a><small>{user && user?.displayName}</small></a></li>
-                  </ul>
-               </li>
-               </>}
+                     <ul className="text-sm bg-base-100 ">
+                        <li className=''><a><small>{user && user?.displayName}</small></a></li>
+                     </ul>
+                  </li>
+                  </>}
+
+               <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded text-lg"> <Link to='/login'>Login</Link> </div>
+               <div onClick={handleLogout} className="hover:bg-red-500 hover:text-white p-1 hover:rounded text-lg"> <Link to='/'>logout</Link> </div>
+            </ul>
          </div>
 
       </>
