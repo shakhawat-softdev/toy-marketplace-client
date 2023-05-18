@@ -10,13 +10,34 @@ const Blog = () => {
 
          <div className='px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex flex-col gap-5'>
             <div>
-               <h1 className='font-bold text-xl'> 1. Differences between uncontrolled and controlled components</h1>
-               <p><span className='font-bold'>ANS:</span> In the context of React, controlled and uncontrolled components refer to the way data is managed within the components.</p>
+               <h1 className='font-bold text-xl'> What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
+               <p><span className='font-bold'>ANS:</span> Access Token: An access token is a credential that is issued to a client (such as a mobile app or a web browser) by an authentication server (usually as part of an OAuth 2.0 or OpenID Connect protocol). The access token represents the client's authorization to access specific resources or perform certain actions on behalf of the authenticated user. It is typically a short-lived token with a limited lifespan, often ranging from a few minutes to several hours.</p>
                <p>
-                  Controlled components are React components that have their data managed by the parent component through props. The parent component passes down the value and state of the component as props and also provides functions to handle changes to the data. This allows the parent component to have full control over the component's data and behavior. For example, a controlled input component in React would have its value and onChange event handler managed by the parent component.
+                  Refresh Token: A refresh token is a long-lived credential that is also issued by the authentication server alongside the access token. Its purpose is to obtain a new access token when the current one expires without requiring the user to reauthenticate. Unlike access tokens, refresh tokens are not sent with every API request. Instead, they are securely stored by the client and used to request a new access token when needed
                </p>
                <p>
-                  Uncontrolled components, on the other hand, manage their own state internally and do not rely on the parent component to manage their data. In uncontrolled components, the data is managed by the component itself using the component's internal state. For example, an uncontrolled input component would manage its own value and update the state based on user input.
+                  The workflow involving access tokens and refresh tokens typically follows these steps:
+               </p>
+               <p>
+                  1.Authentication: The client  initiates the authentication process by sending the user's credentials to the authentication server. The server verifies the credentials and, if valid, generates an access token and a refresh token.
+               </p>
+               <p>
+                  2. Access Token Usage: The client includes the access token in the authorization header or another designated location  when making requests to access protected resources. The server validates the access token to ensure it is not expired, has a valid digital signature, and grants the required permissions to access the requested resource.
+               </p>
+               <p>
+                  3.Access Token Expiration: Access tokens have a limited lifespan, after which they become invalid. This expiration time is typically included in the token itself or provided by the server's response. If the access token expires, the client needs to obtain a new one to continue accessing protected resources.
+               </p>
+               <p>
+                  4.Refresh Token Usage: When the access token expires, the client can send the refresh token to the authentication server in a secure manner (e.g., through a protected backend endpoint). The server verifies the refresh token's validity and, if valid, issues a new access token without requiring the user to reauthenticate.
+               </p>
+               <p>
+                  5. Token Storage: Both the access token and the refresh token need to be securely stored on the client-side. Here are some common practices:
+               </p>
+               <p>
+                  Access Token: Since the access token is short-lived and needs to be sent with each request, it is typically stored in memory or a short-term storage mechanism like a session variable or local storage. This allows easy access for inclusion in API requests.
+               </p>
+               <p>
+                  Refresh Token: Refresh tokens are more sensitive and have a longer lifespan. They should be stored securely to prevent unauthorized access. Common practices include storing refresh tokens in encrypted form within a secure storage mechanism such as secure HTTP-only cookies or device-specific secure storage (e.g., Keychain in iOS or Keystore in Android). Storing refresh tokens securely helps mitigate the risk of token theft or misuse.
                </p>
             </div>
 
