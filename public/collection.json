@@ -1,0 +1,130 @@
+[
+   {
+      "id": 1,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 9.99,
+      "toyDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "provider": "ToyMart"
+   },
+   {
+      "id": 2,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 12.99,
+      "toyDetails": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "provider": "FunToys"
+   },
+   {
+      "id": 3,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 4,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 5,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 6,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 7,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 8,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 9,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 10,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 11,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 12,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 13,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 14,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 15,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   },
+   {
+      "id": 16,
+      "name": "toycar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scalextric-Tin-Cars-restored.png",
+      "price": 19.99,
+      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "provider": "PlayfulWorld"
+   }
+]

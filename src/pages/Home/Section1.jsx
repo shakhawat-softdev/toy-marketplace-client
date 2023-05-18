@@ -1,4 +1,3 @@
-import img1 from '../../../public/images/mainbanner/main1.jpg'
 import img2 from '../../../public/images/mainbanner/main2.jpg'
 import img3 from '../../../public/images/mainbanner/main3.jpg'
 import img4 from '../../../public/images/mainbanner/main4.jpg'
