@@ -42,15 +42,33 @@ const Blog = () => {
             </div>
 
             <div>
-               <h1 className='font-bold text-xl'> 2. How to validate React props using PropTypes?</h1>
-               <p><span className='font-bold'>ANS:</span> In React, PropTypes is a package that provides a way to validate the props passed to a component. It is useful in ensuring that the component receives the correct type of data and in providing developers with a way to debug and catch errors during development. Here is an example of how to validate React props using PropTypes:</p>
+               <h1 className='font-bold text-xl'> 2. Compare SQL and NoSQL databases</h1>
+               <p><span className='font-bold'>ANS:</span>(1) Data Model:</p>
                <ul>
-                  <li>1.Install the PropTypes package.</li>
-                  <li>2.Import PropTypes into we component.</li>
-                  <li>3.Define the PropTypes for we component by adding a propTypes property to we component.</li>
-                  <li>4.Use the props in we component.</li>
+                  <li>SQL: Follows a structured, tabular data model with fixed schemas.</li>
+                  <li>NoSQL: Offers flexibility with various data models like key-value, document, columnar, or graph databases.</li>
                </ul>
-               <p>By using PropTypes, we can ensure that the props passed to our component are of the correct type, catch errors during development, and make our code more robust.</p>
+               <p>(2) Schema:</p>
+               <ul>
+                  <li> SQL: Follows a structured, tabular data model with fixed schemas.</li>
+                  <li>NoSQL: Schema-less or flexible schemas allow for dynamic and evolving data structures.</li>
+               </ul>
+               <p>(3) Query Language:</p>
+               <ul>
+                  <li>SQL: Follows a structured, tabular data model with fixed schemas.</li>
+                  <li>NoSQL: Databases may have their own query languages, APIs, or interfaces specific to their data model.</li>
+               </ul>
+               <p>(4) Scalability:</p>
+               <ul>
+                  <li>SQL: Primarily vertically scalable, requiring hardware upgrades for increased capacity.</li>
+                  <li>NoSQL: Designed for horizontal scalability, allowing for distributed data across multiple servers.</li>
+               </ul>
+               <p>(5) Data Consistency:</p>
+               <ul>
+                  <li>SQL: Emphasizes strong consistency and supports ACID properties (Atomicity, Consistency, Isolation, Durability).</li>
+                  <li>NoSQL: Prioritizes scalability and may offer eventual consistency or other relaxed consistency models.</li>
+               </ul>
+
             </div>
 
             <div>
