@@ -22,4 +22,4 @@ const NewArrival = ({ toy }) => {
    );
 };
 
-export default NewArrival;
+export default NewArrival; 

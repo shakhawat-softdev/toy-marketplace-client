@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>All Toys</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>My Toys</Link> </div>
-      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Add A Toy</Link> </div>
+      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/addToy'>Add A Toy</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/blog'>Blogs</Link> </div>
    </div>
 
