@@ -72,10 +72,10 @@ const Blog = () => {
             </div>
 
             <div>
-               <h1 className='font-bold text-xl'> 3.Difference between nodejs and express js</h1>
-               <p><span className='font-bold'>ANS:</span> Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows developers to run JavaScript code on the server-side. It provides an environment for building scalable and high-performance network applications. Node.js is widely used for developing server-side applications and tools, such as web servers, APIs, command-line tools, and desktop applications. </p>
+               <h1 className='font-bold text-xl'> 3.What is express js? What is Nest JS (google it)?s</h1>
+               <p><span className='font-bold'>ANS:</span> Express.js is a fast and minimalist web application framework for Node.js that simplifies the process of building web applications and APIs by providing a set of features for handling HTTP requests, routing, middleware integration, and managing application-level functionalities. </p>
 
-               <p>Express.js, on the other hand, is a web framework built on top of Node.js that provides a set of features and tools for building web applications and APIs. Express.js simplifies the process of building web applications by providing a set of routing and middleware features that help handle HTTP requests and responses. It also provides features for handling errors, parsing request bodies, serving static files, and more.</p>
+               <p>Nest.js is a progressive and versatile framework for building efficient, scalable, and maintainable server-side applications using TypeScript. It leverages the power of Node.js and combines elements of object-oriented programming, functional programming, and reactive programming to provide a robust and extensible platform for building server-side applications. Nest.js encourages modular architecture, dependency injection, and a clear separation of concerns, making it suitable for a wide range of applications, including APIs, microservices, and real-time applications.</p>
 
             </div>
             <div>
