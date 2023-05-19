@@ -15,7 +15,7 @@ const Navbar = () => {
    }
    const navItems = <div className="flex flex-col lg:flex-row gap-3 text-lg">
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
-      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>All Toys</Link> </div>
+      <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/allToys'>All Toys</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>My Toys</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/addToy'>Add A Toy</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/blog'>Blogs</Link> </div>

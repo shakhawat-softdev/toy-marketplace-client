@@ -10,13 +10,22 @@ import Section4 from "./Section4";
 
 const Home = () => {
 
-   const [allToys, setAllToys] = useState([])
+   const [allbannerToys, setAllbannerToys] = useState([]);
+   const [allToysFromDB, setAllToysFromDB] = useState([]);
 
    useEffect(() => {
       fetch('collection.json')
          .then(res => res.json())
-         .then(data => setAllToys(data))
+         .then(data => setAllbannerToys(data))
+   }, []);
+
+   useEffect(() => {
+      fetch('http://localhost:5000/dolls')
+         .then(res => res.json())
+         .then(data => setAllToysFromDB(data))
    }, [])
+
+   // console.log(allToysFromDB);
 
 
    return (
@@ -26,14 +35,18 @@ const Home = () => {
          <section>
             <h1 className='text-3xl mt-3 text-center' ><span>New</span><span className='font-bold'> Arrivals</span></h1>
             <div className="grid lg:grid-cols-4">
-               {allToys.map(toy => <NewArrival toy={toy} key={toy.id} />)}
+               {allbannerToys.map(toy => <NewArrival toy={toy} key={toy.id} />)}
             </div>
+            {/* <div className="divider"></div> */}
          </section>
 
 
          <section>
-            <h1 className='text-3xl mt-3 text-center' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
-            <Category />
+            <div className="text-center my-10">
+               <h1 className='text-3xl m-10' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
+               <Category />
+            </div>
+            <div className="divider"></div>
          </section>
 
          <section className="flex flex-col justify-center items-center">

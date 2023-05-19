@@ -5,10 +5,10 @@ const Category = () => {
 
 
    return (
-      <div>
+      <div >
          <Tabs>
-            <TabList>
-               <Tab>Baby Dolls</Tab>
+            <TabList >
+               <Tab >Baby Dolls</Tab>
                <Tab>Barbie Dolls</Tab>
                <Tab>American Dolls</Tab>
             </TabList>

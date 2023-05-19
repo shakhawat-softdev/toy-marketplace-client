@@ -9,16 +9,19 @@ const AddToy = () => {
    const handleAddToy = (event) => {
       event.preventDefault();
       const form = event.target;
+
       const sellerName = form.name.value;
       const email = form.email.value;
       const toyName = form.toyName.value;
       const category = value;
       const toyImgUrl = form.imgUrl.value;
       const price = form.price.value;
+      const quantity = form.quantity.value;
       const details = form.details.value;
       const rating = form.rating.value;
 
-      const toyInfo = { sellerName, email, toyName, category, toyImgUrl, price, details, rating }
+
+      const toyInfo = { sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating }
       console.log(toyInfo);
 
 
@@ -86,7 +89,7 @@ const AddToy = () => {
                   <label className="label">
                      <span className="label-text">Available Quantity</span>
                   </label>
-                  <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                  <input type="text" name="quantity" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                </div>
                <div>
                   <label className="label">

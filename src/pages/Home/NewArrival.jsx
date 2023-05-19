@@ -2,7 +2,7 @@
 
 const NewArrival = ({ toy }) => {
    const { id, name, image, price, toyDetails, provider } = toy;
-   console.log(toy);
+   // console.log(toy);
    return (
       <>
          <div className="card w-80 bg-base-100 shadow-sm boredr border-2 border-slate-500 my-2">
