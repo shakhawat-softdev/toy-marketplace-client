@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const UpdateAdoll = () => {
    const toyFromDB = useLoaderData()
@@ -40,7 +41,7 @@ const UpdateAdoll = () => {
          .then(data => {
             console.log(data)
             if (data.modifiedCount > 0) {
-               alert("success")
+               Swal.fire('Update!', 'Item been Updated successfully!!');
             }
          })
 

@@ -74,9 +74,9 @@ const AddToy = () => {
                   <select value={value} onChange={handleChange}
                      className="select select-bordered">
                      <option disabled>Select one</option>
-                     <option value='babyDolls'>Baby Dolls</option>
-                     <option value='barbieDolls'>Barbie Dolls</option>
-                     <option value='amiricanDolls'>Amirican Dolls</option>
+                     <option value='babyDoll'>Baby Dolls</option>
+                     <option value='barbieDoll'>Barbie Dolls</option>
+                     <option value='amiricanDoll'>Amirican Dolls</option>
                   </select>
 
 

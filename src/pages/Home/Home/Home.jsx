@@ -6,24 +6,29 @@ import 'react-tabs/style/react-tabs.css';
 import Category from "../Category/Category";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
+import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
-
+   const allCollcetTionFromDB = useLoaderData()
    const [allbannerToys, setAllbannerToys] = useState([]);
-   const [allToysFromDB, setAllToysFromDB] = useState([]);
+   const [allDollFromDB, setAllDollFromDB] = useState(allCollcetTionFromDB)
 
+
+   // console.log(allCollcetTionFromDB);
+
+   const [allToysFromDB, setAllToysFromDB] = useState([]);
    useEffect(() => {
       fetch('collection.json')
          .then(res => res.json())
          .then(data => setAllbannerToys(data))
    }, []);
 
-   useEffect(() => {
-      fetch('http://localhost:5000/dolls')
-         .then(res => res.json())
-         .then(data => setAllToysFromDB(data))
-   }, [])
+   // useEffect(() => {
+   //    fetch('http://localhost:5000/dolls')
+   //       .then(res => res.json())
+   //       .then(data => setAllToysFromDB(data))
+   // }, [])
 
    // console.log(allToysFromDB);
 
@@ -44,7 +49,7 @@ const Home = () => {
          <section>
             <div className="text-center my-10">
                <h1 className='text-3xl m-10' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
-               <Category />
+               <Category allDollFromDB={allDollFromDB} />
             </div>
             <div className="divider"></div>
          </section>
