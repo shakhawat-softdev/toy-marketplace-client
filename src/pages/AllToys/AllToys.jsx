@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TableRow from "./TableRow";
+import useTitle from "../../hook/useTitle";
 
 
 const AllToys = () => {
+   useTitle('ToyKingdom | All Toys');
+
    const [allToys, setAllToys] = useState([])
    const allToysFromDB = useLoaderData();
 

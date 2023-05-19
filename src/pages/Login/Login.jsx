@@ -3,10 +3,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hook/useTitle';
 
 
 
 const Login = () => {
+   useTitle('ToyKingdom | Login');
+
    const [message, setMessage] = useState('');
    const { sinInUser, signInGoogle, } = useContext(AuthContext)
    const navigate = useNavigate();

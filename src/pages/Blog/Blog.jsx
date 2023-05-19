@@ -1,7 +1,11 @@
+import useTitle from "../../hook/useTitle";
 
 
 
 const Blog = () => {
+
+   useTitle('ToyKingdom | Blog');
+
 
 
    return (

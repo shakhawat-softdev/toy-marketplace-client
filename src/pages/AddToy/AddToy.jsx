@@ -1,10 +1,13 @@
 import { useState } from "react";
 // ES6 Modules or TypeScript
 import Swal from 'sweetalert2'
+import useTitle from "../../hook/useTitle";
 
 
 
 const AddToy = () => {
+   useTitle('ToyKingdom | Add A Toy');
+
    const [value, setValue] = useState('amiricanDolls');
    const handleChange = (e) => {
       setValue(e.target.value);

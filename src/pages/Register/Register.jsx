@@ -2,8 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hook/useTitle';
 
 const Register = () => {
+   useTitle('ToyKingdom | Register');
+
    const { registerUser, logout } = useContext(AuthContext)
    const [message, setMessage] = useState('');
    const navigate = useNavigate()

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const SubCategoryCard = ({ doll }) => {
    console.log(doll);
@@ -28,7 +29,7 @@ const SubCategoryCard = ({ doll }) => {
             <p>Rating: {rating}</p>
 
             <div className="card-actions justify-end">
-               <button className="btn btn-primary">Details</button>
+               <Link to={`/viewDetails/${_id}`}><label onClick={() => handleDetails(_id)} className="btn btn-ghost btn-active btn-sm">View Details</label></Link>
             </div>
          </div>
       </div>

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
+import useTitle from "../../hook/useTitle";
 
 const UpdateAdoll = () => {
+   useTitle('ToyKingdom | Update A Toy');
+
    const toyFromDB = useLoaderData()
    const [toy, setToy] = useState(toyFromDB);
    const { _id, sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating } = toy;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const TableRow = ({ toyInfo }) => {
 
+
    const { _id, sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating } = toyInfo;
 
    const handleDetails = (_id) => {
@@ -18,7 +19,7 @@ const TableRow = ({ toyInfo }) => {
             <td>{category}</td>
             <td>${price}</td>
             <td>{quantity}</td>
-            <td><Link to={`/viewDetails/${_id}`}><label onClick={() => handleDetails(_id)} className="btn btn-ghost btn-active btn-sm">View Details</label></Link></td>
+            <td><Link to={`/viewDetails/${_id}`} state={`Toy Details | ${toyName}`}><label className="btn btn-ghost btn-active btn-sm">View Details</label></Link></td>
          </tr>
 
       </>

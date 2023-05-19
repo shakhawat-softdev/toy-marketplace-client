@@ -7,9 +7,12 @@ import Category from "../Category/Category";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../../hook/useTitle";
 
 
 const Home = () => {
+   useTitle('ToyKingdom | Home');
+
    const allCollcetTionFromDB = useLoaderData()
    const [allbannerToys, setAllbannerToys] = useState([]);
    const [allDollFromDB, setAllDollFromDB] = useState(allCollcetTionFromDB)
