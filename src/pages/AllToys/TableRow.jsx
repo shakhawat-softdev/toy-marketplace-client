@@ -26,3 +26,4 @@ const TableRow = ({ toyInfo }) => {
 };
 
 export default TableRow;
+

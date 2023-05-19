@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 
 const AddToy = () => {
-   const [value, setValue] = useState('');
+   const [value, setValue] = useState('amiricanDolls');
    const handleChange = (e) => {
       setValue(e.target.value);
    };
@@ -38,13 +38,7 @@ const AddToy = () => {
          .then(data => {
             console.log(data);
             if (data.insertedId) {
-               Swal.fire({
-                  position: 'top-end',
-                  icon: 'success',
-                  title: 'Added Toy Successful!!',
-                  showConfirmButton: false,
-                  timer: 1500
-               })
+               Swal.fire('Doll Insert successfully!!!');
             }
          })
 
