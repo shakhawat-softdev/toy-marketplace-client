@@ -44,9 +44,9 @@ const router = createBrowserRouter([
             loader: () => fetch('http://localhost:5000/dolls')
          },
          {
-            path: '/viewDetails/:id',
-            element: <PrivateRoute><ViewDetails /></PrivateRoute>
-
+            path: 'viewDetails/:id',
+            element: <PrivateRoute><ViewDetails /></PrivateRoute>,
+            loader: ({ params }) => fetch(`http://localhost:5000/dolls/${params.id}`)
          }
       ]
    }
