@@ -37,10 +37,7 @@ const MyToys = () => {
                   </tr>
                </thead>
                <tbody>
-
                   {myToys.map(toy => <MyToyRow toy={toy} myToys={myToys} setMyToys={setMyToys} key={toy._id} />)}
-
-
                </tbody>
             </table>
          </div>

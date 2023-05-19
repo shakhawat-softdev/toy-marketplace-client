@@ -79,14 +79,7 @@ const AddToy = () => {
                      <option value='amiricanDolls'>Amirican Dolls</option>
                   </select>
 
-                  {/* <div>
-                     <select value={value} onChange={handleChange}>
-                        <option value="Orange">Orange</option>
-                        <option value="Radish">Radish</option>
-                        <option value="Cherry">Cherry</option>
-                     </select>
-                     <p>{`You selected ${value}`}</p>
-                  </div> */}
+
 
                </div>
 

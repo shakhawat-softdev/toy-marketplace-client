@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const MyToyRow = ({ toy, myToys, setMyToys }) => {
@@ -25,16 +26,12 @@ const MyToyRow = ({ toy, myToys, setMyToys }) => {
                .then(data => {
                   if (data.deletedCount > 0) {
                      Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
-
                      const remaining = myToys.filter(toy => toy._id !== id)
                      setMyToys(remaining);
                   }
                })
          }
       })
-
-
-
 
 
 
@@ -57,7 +54,7 @@ const MyToyRow = ({ toy, myToys, setMyToys }) => {
          <td>{rating}</td>
          <td>{details}</td>
          <td>{quantity}</td>
-         <td><button className="btn btn-info btn-sm">Update</button></td>
+         <td><Link to={`/updateADoll/${_id}`}><button className="btn btn-info btn-sm">Update</button></Link></td>
          <td><button className="btn btn-error btn-sm" onClick={() => handleDelete(_id)}>Delete</button></td>
       </tr>
    );
