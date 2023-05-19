@@ -1,4 +1,8 @@
 import { useState } from "react";
+// ES6 Modules or TypeScript
+import Swal from 'sweetalert2'
+
+
 
 const AddToy = () => {
    const [value, setValue] = useState('');
@@ -20,9 +24,29 @@ const AddToy = () => {
       const details = form.details.value;
       const rating = form.rating.value;
 
+      const newToy = { sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating }
+      console.log(newToy);
 
-      const toyInfo = { sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating }
-      console.log(toyInfo);
+      fetch('http://localhost:5000/dolls', {
+         method: 'POST',
+         headers: {
+            "content-type": "application/json"
+         },
+         body: JSON.stringify(newToy)
+      })
+         .then(res => res.json())
+         .then(data => {
+            console.log(data);
+            if (data.insertedId) {
+               Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Added Toy Successful!!',
+                  showConfirmButton: false,
+                  timer: 1500
+               })
+            }
+         })
 
 
    }
