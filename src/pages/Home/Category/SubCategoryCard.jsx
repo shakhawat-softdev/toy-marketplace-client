@@ -30,9 +30,11 @@ const SubCategoryCard = ({ doll }) => {
 
             {user ? <div className="card-actions justify-end">
                <Link to={`/viewDetails/${_id}`}><label onClick={() => handleDetails(_id)} className="btn btn-ghost btn-active btn-sm">View Details</label></Link>
-            </div> :
+            </div>
+               :
                <div className="card-actions justify-end">
-                  <button onClick={notify} className="btn btn-ghost btn-active btn-sm">View Details</button>
+                  {/* <button onClick={notify} className="btn btn-ghost btn-active btn-sm">View Details</button> */}
+                  <Link to={`/viewDetails/${_id}`}><button onClick={notify} className="btn btn-ghost btn-active btn-sm">View Details</button></Link>
                </div>
             }
 

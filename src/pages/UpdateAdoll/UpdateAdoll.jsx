@@ -32,7 +32,7 @@ const UpdateAdoll = () => {
       const newToy = { price, quantity, details }
       console.log(newToy);
 
-      fetch(`http://localhost:5000/doll/${_id}`, {
+      fetch(`https://toy-marketplace-server-side-gray.vercel.app/doll/${_id}`, {
          method: 'PATCH',
          headers: {
             'content-type': 'application/json'

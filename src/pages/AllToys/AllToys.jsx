@@ -13,13 +13,13 @@ const AllToys = () => {
 
 
    useEffect(() => {
-      fetch('http://localhost:5000/dolls')
+      fetch('https://toy-marketplace-server-side-gray.vercel.app/dolls')
          .then(res => res.json())
          .then(data => setAllToys(data))
    }, [allToysFromDB]);
 
    const handleSearchName = () => {
-      fetch(`http://localhost:5000/toySearchByName/${searchText}`)
+      fetch(`https://toy-marketplace-server-side-gray.vercel.app/toySearchByName/${searchText}`)
          .then(res => res.json())
          .then(data => setAllToys(data))
    }

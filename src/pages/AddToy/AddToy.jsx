@@ -34,7 +34,7 @@ const AddToy = () => {
       const newToy = { sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating }
       console.log(newToy);
 
-      fetch('http://localhost:5000/dolls', {
+      fetch('https://toy-marketplace-server-side-gray.vercel.app/dolls', {
          method: 'POST',
          headers: {
             "content-type": "application/json"

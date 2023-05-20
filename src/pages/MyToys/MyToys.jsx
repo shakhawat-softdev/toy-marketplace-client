@@ -14,7 +14,7 @@ const MyToys = () => {
    console.log(sort);
 
    useEffect(() => {
-      const url = `http://localhost:5000/doll?email=${user?.email}`;
+      const url = `https://toy-marketplace-server-side-gray.vercel.app/doll?email=${user?.email}`;
       fetch(url)
          .then(res => res.json())
          .then(data => setMyToys(data))
@@ -26,17 +26,18 @@ const MyToys = () => {
       const sort = event.target.value;
 
       if (sort == 'accending') {
-         const url = `http://localhost:5000/dollBysort?email=${user?.email}`;
+         const url = `https://toy-marketplace-server-side-gray.vercel.app/dollBysort?email=${user?.email}`;
          fetch(url)
             .then(res => res.json())
             .then(data => setMyToys(data))
       }
-      // else if (sort == 'decending') {
-      //    const url = `http://localhost:5000/dollBysortTwo?email=${user?.email}`;
-      //    fetch(url)
-      //       .then(res => res.json())
-      //       .then(data => setMyToys(data))
-      // }
+
+      if (sort == 'decending') {
+         const url = `https://toy-marketplace-server-side-gray.vercel.app/dollBysortTwo?email=${user?.email}`;
+         fetch(url)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+      }
 
 
    }
@@ -52,7 +53,7 @@ const MyToys = () => {
             <select className="select select-bordered w-full max-w-xs mb-10" value={sort} onChange={handleDropdownChange}>
                <option value={"Choose One"}>Chose</option>
                <option value={"accending"}>Low to high</option>
-               {/* <option value={"decending"}>High to low</option> */}
+               <option value={"decending"}>High to low</option>
             </select>
 
 
