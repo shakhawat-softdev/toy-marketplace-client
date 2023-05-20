@@ -8,13 +8,10 @@ const MyToys = () => {
    useTitle('ToyKingdom | My Toys');
    const { user } = useContext(AuthContext);
    const [myToys, setMyToys] = useState([])
+   const [sort, setSortBy] = useState('');
 
-   const [sortBy, setSortBy] = useState('');
-   const handleDropdownChange = (event) => {
-      setSortBy(event.target.value);
-   }
 
-   console.log(sortBy);
+   console.log(sort);
 
    useEffect(() => {
       const url = `http://localhost:5000/doll?email=${user?.email}`;
@@ -24,17 +21,43 @@ const MyToys = () => {
    }, [user])
 
 
+   const handleDropdownChange = (event) => {
+      setSortBy(event.target.value);
+      const sort = event.target.value;
+
+      if (sort == 'accending') {
+         const url = `http://localhost:5000/dollBysort?email=${user?.email}`;
+         fetch(url)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+      }
+      // else if (sort == 'decending') {
+      //    const url = `http://localhost:5000/dollBysortTwo?email=${user?.email}`;
+      //    fetch(url)
+      //       .then(res => res.json())
+      //       .then(data => setMyToys(data))
+      // }
+
+
+   }
+
+
 
    return (
       <div className="mb-72">
          <h1 className='text-3xl mt-3 text-center my-10' ><span>My</span><span className='font-bold'> Toys</span></h1>
          <div className="ml-5">
             <p>Sort By Price</p>
-            <select className="select select-bordered w-full max-w-xs mb-10" value={sortBy} onChange={handleDropdownChange}>
-               {/* <option disabled selected >Sort By Price</option> */}
-               <option value={"accending"}>Accending</option>
-               <option value={"decending"}>Decending</option>
+
+            <select className="select select-bordered w-full max-w-xs mb-10" value={sort} onChange={handleDropdownChange}>
+               <option value={"Choose One"}>Chose</option>
+               <option value={"accending"}>Low to high</option>
+               {/* <option value={"decending"}>High to low</option> */}
             </select>
+
+
+
+
          </div>
 
          <div className="overflow-x-auto">
