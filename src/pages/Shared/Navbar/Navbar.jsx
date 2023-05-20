@@ -13,6 +13,7 @@ const Navbar = () => {
          .then(result => { })
          .catch()
    }
+
    const navItems = <div className="flex flex-col lg:flex-row gap-3 text-lg">
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/'>Home</Link> </div>
       <div className="hover:bg-red-500 hover:text-white p-1 hover:rounded"> <Link to='/allToys'>All Toys</Link> </div>
@@ -70,6 +71,8 @@ const Navbar = () => {
                <div onClick={handleLogout} className="hover:bg-red-500 hover:text-white p-1 hover:rounded text-lg"> <Link to='/'>logout</Link> </div>
             </ul>
          </div>
+
+
 
       </>
    );

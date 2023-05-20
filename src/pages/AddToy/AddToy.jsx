@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 // ES6 Modules or TypeScript
 import Swal from 'sweetalert2'
 import useTitle from "../../hook/useTitle";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 
 const AddToy = () => {
    useTitle('ToyKingdom | Add A Toy');
 
-   const [value, setValue] = useState('amiricanDolls');
+   const { user } = useContext(AuthContext)
+   console.log(user)
+
+   const [value, setValue] = useState('barbieDoll');
    const handleChange = (e) => {
       setValue(e.target.value);
    };
@@ -56,13 +60,13 @@ const AddToy = () => {
                   <label className="label">
                      <span className="label-text">Name</span>
                   </label>
-                  <input type="text" name="name" placeholder="User Name" className="input input-bordered w-full max-w-xs" />
+                  <input type="text" name="name" defaultValue={user?.displayName} placeholder="User Name" className="input input-bordered w-full max-w-xs" />
                </div>
                <div>
                   <label className="label">
                      <span className="label-text">Email</span>
                   </label>
-                  <input type="emsil" name="email" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                  <input type="email" name="email" defaultValue={user?.email} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                </div>
                <div>
                   <label className="label">
@@ -96,14 +100,14 @@ const AddToy = () => {
                   <label className="label">
                      <span className="label-text">Price</span>
                   </label>
-                  <input type="text" name="price" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                  <input type="number" name="price" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                </div>
 
                <div>
                   <label className="label">
                      <span className="label-text">Available Quantity</span>
                   </label>
-                  <input type="text" name="quantity" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                  <input type="number" name="quantity" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                </div>
                <div>
                   <label className="label">
@@ -115,7 +119,7 @@ const AddToy = () => {
                   <label className="label">
                      <span className="label-text">Rating</span>
                   </label>
-                  <input type="text" name="rating" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                  <input type="number" name="rating" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                </div>
             </div>
             <div className="text-center">
