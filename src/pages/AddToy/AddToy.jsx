@@ -46,6 +46,7 @@ const AddToy = () => {
             console.log(data);
             if (data.insertedId) {
                Swal.fire('Doll Insert successfully!!!');
+               form.reset();
             }
          })
 

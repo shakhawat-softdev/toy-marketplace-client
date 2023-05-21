@@ -25,10 +25,11 @@ const Login = () => {
 
       sinInUser(email, password)
          .then(resut => {
-            // const loggedUser = resut.user;
+            const loggedUser = resut.user;
             setMessage('Login successful!');
             navigate(from);
             setMessage('');
+            form.reset();
          })
          .catch(error => {
             setMessage(error.message)

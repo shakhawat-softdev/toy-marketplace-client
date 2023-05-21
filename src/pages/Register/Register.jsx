@@ -47,9 +47,9 @@ const Register = () => {
             console.log(loggedUser)
             setMessage('Registation Sussessful')
             updeteUserProfile(loggedUser, userName, imageUrl)
-
             logout();
-            navigate('/login')
+            navigate('/login');
+            form.reset();
 
          })
 

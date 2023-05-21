@@ -39,6 +39,7 @@ const UpdateAdoll = () => {
             console.log(data)
             if (data.modifiedCount > 0) {
                Swal.fire('Update!', 'Item been Updated successfully!!');
+
             }
          })
    }
