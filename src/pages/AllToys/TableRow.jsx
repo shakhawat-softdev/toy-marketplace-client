@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const TableRow = ({ toyInfo }) => {
+const TableRow = ({ toyInfo, index }) => {
 
 
    const { _id, sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating } = toyInfo;
@@ -13,7 +13,7 @@ const TableRow = ({ toyInfo }) => {
    return (
       <>
          <tr>
-            <th>1</th>
+            <th>{index + 1}</th>
             <td>{sellerName}</td>
             <td>{toyName}</td>
             <td>{category}</td>

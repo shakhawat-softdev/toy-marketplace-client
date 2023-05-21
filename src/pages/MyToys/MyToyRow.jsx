@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
-const MyToyRow = ({ toy, myToys, setMyToys }) => {
+const MyToyRow = ({ toy, myToys, setMyToys, index }) => {
    const { _id, sellerName, email, toyName, category, toyImgUrl, price, quantity, details, rating } = toy;
 
    // console.log(myToys)
@@ -39,7 +39,7 @@ const MyToyRow = ({ toy, myToys, setMyToys }) => {
    };
    return (
       <tr>
-         <th>1</th>
+         <th>{index + 1}</th>
          <td>
             <div className="avatar flex justify-start items-center">
                <div className="mask mask-squircle w-12 h-12">

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TableRow from "./TableRow";
 import useTitle from "../../hook/useTitle";
-import { data } from "autoprefixer";
 
 
 const AllToys = () => {
@@ -26,9 +25,11 @@ const AllToys = () => {
 
    return (
       <div>
-         {/* <form className="form-control w-full max-w-xs mx-auto my-10 space-y-4"> */}
-         <input onChange={(e) => setSearchText(e.target.value)} type="text" name="name" placeholder="Toy Name" className="input input-bordered w-full max-w-xs" />
-         <button onClick={handleSearchName} className="btn btn-secondary">Button</button>
+         <h1 className='text-3xl mt-3 text-center my-10' ><span>All</span><span className='font-bold'> Toys</span></h1>
+         <div className="text-center my-10">
+            <input onChange={(e) => setSearchText(e.target.value)} type="text" name="name" placeholder="Toy Name" className="input input-bordered w-full max-w-xs" />
+            <button onClick={handleSearchName} className="btn btn-secondary">Search</button>
+         </div>
 
 
          {/* </form> */}
@@ -41,14 +42,13 @@ const AllToys = () => {
                      <th>Seller</th>
                      <th>Toy Name</th>
                      <th>Sub-Category</th>
-                     {/* <th>location</th> */}
                      <th>price</th>
                      <th>Available Quantity</th>
                      <th>Details</th>
                   </tr>
                </thead>
                <tbody>
-                  {allToys?.map(toyInfo => <TableRow toyInfo={toyInfo} key={toyInfo._id} />)}
+                  {allToys?.map((toyInfo, index) => <TableRow toyInfo={toyInfo} index={index} key={toyInfo._id} />)}
                </tbody>
             </table>
          </div>

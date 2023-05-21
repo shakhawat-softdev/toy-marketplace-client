@@ -21,9 +21,9 @@ const SubCategoryCard = ({ doll }) => {
 
    return (
 
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
-         <figure><img src={toyImgUrl} /></figure>
-         <div className="card-body">
+      <div className="card card-compact w-80 bg-base-100 shadow-xl m-auto">
+         <figure><img className="w-40 h-40" src={toyImgUrl} /></figure>
+         <div className="card-body pt-10">
             <h2 className="card-title">Doll Name: {toyName}</h2>
             <p>Price: ${price}</p>
             <p>Rating: {rating}</p>

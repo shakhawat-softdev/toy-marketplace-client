@@ -11,21 +11,19 @@ const Category = ({ allDollFromDB }) => {
    const [americanDolls, setAmericanDolls] = useState();
 
    useEffect(() => {
-      const babydollsFromDB = allDollFromDB.filter(doll => doll.category == 'babyDoll');
+      const babydollsFromDB = allDollFromDB && allDollFromDB.filter(doll => doll.category == 'babyDoll');
       setBabyDolls(babydollsFromDB)
 
-      const barbieDollsFromDB = allDollFromDB.filter(doll => doll.category == 'barbieDoll');
+      const barbieDollsFromDB = allDollFromDB && allDollFromDB.filter(doll => doll.category == 'barbieDoll');
       setBarbieDolls(barbieDollsFromDB);
 
-      const americanDollsFromDB = allDollFromDB.filter(doll => doll.category == 'amiricanDoll');
+      const americanDollsFromDB = allDollFromDB && allDollFromDB.filter(doll => doll.category == 'amiricanDoll');
       setAmericanDolls(americanDollsFromDB);
    }, [allDollFromDB])
 
 
-
-
    return (
-      <div >
+      <div className='mx-auto overflow-hidden max-w-7xl'>
          <Tabs>
             <TabList >
                <Tab >Baby Dolls</Tab>
@@ -34,20 +32,20 @@ const Category = ({ allDollFromDB }) => {
             </TabList>
 
             <TabPanel>
-               <h2>Here is All Baby Dolls</h2>
+               {/* <h2>Here is All Baby Dolls</h2> */}
                <div className='lg:grid lg:grid-cols-3'>
                   {babyDolls?.map(doll => <SubCategoryCard doll={doll} key={doll._id} />)}
                </div>
 
             </TabPanel>
             <TabPanel>
-               <h2>Here is All Barbie Dolls</h2>
+               {/* <h2>Here is All Barbie Dolls</h2> */}
                <div className='lg:grid lg:grid-cols-3'>
                   {barbieDolls?.map(doll => <SubCategoryCard doll={doll} key={doll._id} />)}
                </div>
             </TabPanel>
             <TabPanel>
-               <h2>American Dolls</h2>
+               {/* <h2>American Dolls</h2> */}
                <div className='lg:grid lg:grid-cols-3'>
                   {americanDolls?.map(doll => <SubCategoryCard doll={doll} key={doll._id} />)}
                </div>

@@ -47,7 +47,7 @@ const MyToys = () => {
    return (
       <div className="mb-72">
          <h1 className='text-3xl mt-3 text-center my-10' ><span>My</span><span className='font-bold'> Toys</span></h1>
-         <div className="ml-5">
+         <div className="ml-5 font-bold">
             <p>Sort By Price</p>
 
             <select className="select select-bordered w-full max-w-xs mb-10" value={sort} onChange={handleDropdownChange}>
@@ -55,9 +55,6 @@ const MyToys = () => {
                <option value={"accending"}>Low to high</option>
                <option value={"decending"}>High to low</option>
             </select>
-
-
-
 
          </div>
 
@@ -79,7 +76,7 @@ const MyToys = () => {
                   </tr>
                </thead>
                <tbody>
-                  {myToys.map(toy => <MyToyRow toy={toy} myToys={myToys} setMyToys={setMyToys} key={toy._id} />)}
+                  {myToys.map((toy, index) => <MyToyRow toy={toy} myToys={myToys} setMyToys={setMyToys} index={index} key={toy._id} />)}
                </tbody>
             </table>
          </div>

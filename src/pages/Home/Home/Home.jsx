@@ -8,12 +8,14 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../../../hook/useTitle";
+import HeroBanner from "../HeroBanner";
 
 
 const Home = () => {
    useTitle('ToyKingdom | Home');
 
    const allCollcetTionFromDB = useLoaderData()
+
    const [allbannerToys, setAllbannerToys] = useState([]);
    const [allDollFromDB, setAllDollFromDB] = useState(allCollcetTionFromDB)
 
@@ -27,31 +29,35 @@ const Home = () => {
          .then(data => setAllbannerToys(data))
    }, []);
 
-   // useEffect(() => {
-   //    fetch('https://toy-marketplace-server-side-gray.vercel.app/dolls')
-   //       .then(res => res.json())
-   //       .then(data => setAllToysFromDB(data))
-   // }, [])
 
-   // console.log(allToysFromDB);
 
 
    return (
       <div className="mx-auto">
-         <Section1 />
+         <HeroBanner />
 
-         <section>
-            <h1 className='text-3xl mt-3 text-center' ><span>New</span><span className='font-bold'> Arrivals</span></h1>
-            <div className="grid lg:grid-cols-4">
+         {/* Gallery Image */}
+
+         <section className="mx-auto bg-gradient-to-r from-[#00C0FF] to-[#4218B8] p-5">
+            <h1 className='text-3xl text-center bg-[red] p-4 text-yellow-50 my-5 rounded-md' ><span>New</span><span className='font-bold'> Arrivals</span></h1>
+            <div className="grid lg:grid-cols-4 mx-auto max-w-7xl gap-5">
                {allbannerToys.map(toy => <NewArrival toy={toy} key={toy.id} />)}
             </div>
             {/* <div className="divider"></div> */}
          </section>
 
 
-         <section>
-            <div className="text-center my-10">
-               <h1 className='text-3xl m-10' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
+         {/* Carosel */}
+         <h1 className='text-3xl text-center bg-[red] p-3 text-yellow-50 mt-5 rounded-md' ><span>Our</span><span className='font-bold'> Barnds</span></h1>
+         <Section1 />
+
+
+         {/* Shop By CATEGORY */}
+
+         <section className="mx-auto">
+            <h1 className='text-3xl m-10 text-center' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
+            <div className="text-center my-10 mx-auto overflow-hidden">
+
                <Category allDollFromDB={allDollFromDB} />
             </div>
             <div className="divider"></div>
@@ -59,7 +65,7 @@ const Home = () => {
 
          <section className="flex flex-col justify-center items-center">
 
-            <h1 className='text-3xl mt-3 text-center' ><span>Way To Shop By</span><span className='font-bold'> Age</span></h1>
+            <h1 className='text-3xl text-center' ><span>Way To Shop By</span><span className='font-bold'> Age</span></h1>
             <Section4 />
          </section>
 
