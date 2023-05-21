@@ -56,10 +56,11 @@ const Home = () => {
 
          <section className="mx-auto">
             <h1 className='text-3xl m-10 text-center' ><span>Shop By</span><span className='font-bold'> Category</span></h1>
-            <div className="text-center my-10 mx-auto overflow-hidden">
 
+            <div className="text-center my-10 mx-auto overflow-hidden">
                <Category allDollFromDB={allDollFromDB} />
             </div>
+
             <div className="divider"></div>
          </section>
 
