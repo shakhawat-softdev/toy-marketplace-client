@@ -40,7 +40,7 @@ const SubCategoryCard = ({ doll }) => {
       //    </div>
       // </div>
 
-      <div className="card w-80 glass">
+      <div className="card w-80 glass m-auto">
          <figure className="px-10 pt-10">
             <img className="w-40 h-40" src={toyImgUrl} alt="car!" />
          </figure>

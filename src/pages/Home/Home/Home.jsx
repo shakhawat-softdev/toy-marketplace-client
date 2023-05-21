@@ -64,13 +64,14 @@ const Home = () => {
             <div className="divider"></div>
          </section>
 
+         {/* Shop By Age */}
          <section className="flex flex-col justify-center items-center">
-
-            <h1 className='text-3xl text-center' ><span>Way To Shop By</span><span className='font-bold'> Age</span></h1>
+            <h1 className='text-3xl text-center my-5' ><span>Way To Shop By</span><span className='font-bold'> Age</span></h1>
             <Section4 />
          </section>
 
-         <section>
+         {/* Discover Our Toy Collection */}
+         <section className="p-5 rounded-md">
             <Section3 />
          </section>
 
