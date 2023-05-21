@@ -30,9 +30,6 @@ const SubCategoryCard = ({ doll }) => {
          </figure>
          <div className="card-body flex flex-col justify-center items-center">
             <h2 className="card-title">Doll Name: {toyName}</h2>
-
-            <p>Price: ${price}</p>
-            <p>Rating: {rating}</p>
             <p>Price: <span className="font-normal">${price}</span></p>
             <div className="flex justify-center items-center gap-1" >Rating: <span className="font-normal">{rating}</span> <div className="flex"><FaStar /><FaStar /><FaStar /><FaStar /> <FaStarHalfAlt /></div> </div>
 
