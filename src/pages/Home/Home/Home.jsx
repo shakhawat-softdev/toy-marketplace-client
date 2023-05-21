@@ -36,21 +36,15 @@ const Home = () => {
       <div className="mx-auto">
          <HeroBanner />
 
-         {/* Gallery Image */}
+         {/*New Arrval Gallery Image */}
 
-         <section className="mx-auto bg-gradient-to-r from-[#00C0FF] to-[#4218B8] p-5">
+         <section className="mx-auto bg-gradient-to-r from-[#3d7eaa] to-[#ffe47a] p-5">
             <h1 className='text-3xl text-center bg-[red] p-4 text-yellow-50 my-5 rounded-md' ><span>New</span><span className='font-bold'> Arrivals</span></h1>
             <div className="grid lg:grid-cols-4 mx-auto max-w-7xl gap-5">
                {allbannerToys.map(toy => <NewArrival toy={toy} key={toy.id} />)}
             </div>
             {/* <div className="divider"></div> */}
          </section>
-
-
-         {/* Carosel */}
-         <h1 className='text-3xl text-center bg-[red] p-3 text-yellow-50 mt-5 rounded-md' ><span>Our</span><span className='font-bold'> Barnds</span></h1>
-         <Section1 />
-
 
          {/* Shop By CATEGORY */}
 
@@ -60,12 +54,16 @@ const Home = () => {
             <div className="text-center my-10 mx-auto overflow-hidden">
                <Category allDollFromDB={allDollFromDB} />
             </div>
-
             <div className="divider"></div>
          </section>
 
+
+         {/* Carosel */}
+         <h1 className='text-3xl text-center bg-gradient-to-r from-[#c31432] to-[#240b36] p-3 text-yellow-50 mt-5 rounded-sm' ><span>Our</span><span className='font-bold'> Barnds</span></h1>
+         <Section1 />
+
          {/* Shop By Age */}
-         <section className="flex flex-col justify-center items-center">
+         <section className="flex flex-col justify-center items-center ove">
             <h1 className='text-3xl text-center my-5' ><span>Way To Shop By</span><span className='font-bold'> Age</span></h1>
             <Section4 />
          </section>

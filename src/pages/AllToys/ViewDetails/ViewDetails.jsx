@@ -17,8 +17,10 @@ const ViewDetails = () => {
                <div className="font-bold">
                   <p>Seller Name: <span className="font-normal">{sellerName}</span></p>
                   <p>Seller Email: <span className="font-normal">{email}</span></p>
+
                   <p>Price: <span className="font-normal">${price}</span></p>
                   <div className="flex justify-center items-center gap-1" >Rating: <span className="font-normal">{rating}</span> <div className="flex"><FaStar /><FaStar /><FaStar /><FaStar /> <FaStarHalfAlt /></div> </div>
+
                   <p>Available Quantity: <span className="font-normal">{quantity}</span></p>
                   <p>Doll Details: <span className="font-normal">{details}</span></p>
                </div>

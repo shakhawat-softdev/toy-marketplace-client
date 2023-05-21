@@ -18,19 +18,23 @@ const NavigationBar = () => {
 
    const navItems = <ul className="menu menu-horizontal text-white font-semibold px-1">
       <Link to='/'><li><span>Home</span></li></Link>
+      <Link to='/allToys'><li><span>All Toys</span></li></Link>
       {user && <>
-         <Link to='/allToys'><li><span>All Toys</span></li></Link>
-         <Link to='/myToys'><li><span>My Toys</span></li></Link>
+
          <Link to='/addToy'><li><span>Add A Toy</span></li></Link>
+         <Link to='/myToys'><li><span>My Toys</span></li></Link>
       </>}
       <Link to='/blog'><li><span>Blogs</span></li></Link>
+
    </ul>
+
+
    const navItemsDropdown = <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <Link to='/'><li><span>Home</span></li></Link>
       {user && <>
          <Link to='/allToys'><li><span>All Toys</span></li></Link>
-         <Link to='/myToys'><li><span>My Toys</span></li></Link>
          <Link to='/addToy'><li><span>Add A Toy</span></li></Link>
+         <Link to='/myToys'><li><span>My Toys</span></li></Link>
       </>}
       <Link to='/blog'><li><span>Blogs</span></li></Link>
    </ul>

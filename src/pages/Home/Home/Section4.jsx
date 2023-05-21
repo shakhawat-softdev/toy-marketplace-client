@@ -6,7 +6,7 @@ import img5 from '../../../../public/images/age/10yerspluse.png'
 
 const Section4 = () => {
    return (
-      <div className="grid grid-cols-3 lg:grid-cols-6 gap-5 lg:w-11/12 text-center border-2 border-red-400 rounded-lg p-5">
+      <div className="grid lg:grid-cols-6 gap-5 text-center rounded-lg overflow-hidden">
          <div className="card w-52 bg-blue-700 rounded-md">
             <figure className="px-10 pt-10">
                <img src={img1} alt="Shoes" className="rounded-md" />

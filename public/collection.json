@@ -4,7 +4,7 @@
       "name": "Lily",
       "image": "https://i.ibb.co/YbYLh5B/1.jpg",
       "price": 9.99,
-      "toyDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "toyDetails": "Ella twirls her way into your heart, bringing the magic of ballet to life.",
       "provider": "ToyMart"
    },
    {
@@ -12,16 +12,14 @@
       "name": "Emma",
       "image": "https://i.ibb.co/4T9zCB1/2.jpg",
       "price": 12.99,
-      "toyDetails": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "provider": "FunToys"
+      "toyDetails": "Dressed in rugged explorer gear, Oliver is ready to embark on thrilling journeys"
    },
    {
       "id": 3,
       "name": "Olivia",
       "image": "https://i.ibb.co/jHxhP5y/3.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      "provider": "PlayfulWorld"
+      "toyDetails": "Luna dives into imaginary underwater worlds, captivating young imaginations."
    },
    {
       "id": 4,
@@ -36,7 +34,7 @@
       "name": "Ava",
       "image": "https://i.ibb.co/8jrvRsf/5.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "This adorable doll comes dressed in a cozy bear onesie, complete with fuzzy ears and a huggable soft body.",
       "provider": "PlayfulWorld"
    },
    {
@@ -44,7 +42,7 @@
       "name": "Mia",
       "image": "https://i.ibb.co/KzC0HTd/6.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Sophia the Fashionista Doll: Sophia is always ahead of the latest trends with her stylish outfits",
       "provider": "PlayfulWorld"
    },
    {
@@ -60,7 +58,7 @@
       "name": "Charlotte",
       "image": "https://i.ibb.co/v3P4Zt2/8.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "With his miniature guitar and a natural talent for music, Leo strums his way into the hearts.",
       "provider": "PlayfulWorld"
    },
    {
@@ -68,7 +66,7 @@
       "name": "Amelia",
       "image": "https://i.ibb.co/QC61XWV/9.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Amelia wears a cute chef's hat and carries a tiny rolling pin.",
       "provider": "PlayfulWorld"
    },
    {
@@ -76,7 +74,7 @@
       "name": "Harper",
       "image": "https://i.ibb.co/BgJBXs3/10.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Dressed in a sporty jersey and holding a mini basketball, Sammy brings the thrill of the game.",
       "provider": "PlayfulWorld"
    },
    {
@@ -84,7 +82,7 @@
       "name": "Evelyn",
       "image": "https://i.ibb.co/5sLbjX5/11.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Mila comes with a menagerie of miniature animals, promoting empathy",
       "provider": "PlayfulWorld"
    },
    {
@@ -92,7 +90,7 @@
       "name": "Abigail",
       "image": "https://i.ibb.co/C8xs5D7/12.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": " Noah is equipped with a lab coat, goggles, and a magnifying glass,.",
       "provider": "PlayfulWorld"
    },
    {
@@ -100,7 +98,7 @@
       "name": "Emily",
       "image": "https://i.ibb.co/HCzgnFS/13.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Ava embarks on exciting nature expeditions, fostering a love for the outdoors..",
       "provider": "PlayfulWorld"
    },
    {
@@ -108,7 +106,7 @@
       "name": "Elizabeth",
       "image": "https://i.ibb.co/7tZDn47/14.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Lucas unleashes his imagination to save the day, inspiring bravery and heroic acts.",
       "provider": "PlayfulWorld"
    },
    {
@@ -116,7 +114,7 @@
       "name": "Scarlett",
       "image": "https://i.ibb.co/Z1fLGzX/15.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Clutching a tiny book, Emily sparks a love for reading and storytelling.",
       "provider": "PlayfulWorld"
    },
    {
@@ -124,7 +122,7 @@
       "name": "Grace",
       "image": "https://i.ibb.co/yV8KVnZ/16.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Henry wears a dapper suit, top hat, and carries a cane, teaching kids about manners, chivalry.",
       "provider": "PlayfulWorld"
    },
    {
@@ -140,7 +138,7 @@
       "name": "Penelope",
       "image": "https://i.ibb.co/rsfFYvW/18.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Zara performs daring acrobatic moves and comes with a mini trapeze.",
       "provider": "PlayfulWorld"
    },
    {
@@ -148,7 +146,7 @@
       "name": "Hazel",
       "image": "https://i.ibb.co/vJR9JzH/19.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "Grace spreads love and kindness with her warm smile and thoughtful gestures.",
       "provider": "PlayfulWorld"
    },
    {
@@ -156,7 +154,7 @@
       "name": "Stella",
       "image": "https://i.ibb.co/vJzrKHS/20.jpg",
       "price": 19.99,
-      "toyDetails": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "toyDetails": "acob inspires kids to be resourceful and learn basic DIY skills while having fun.",
       "provider": "PlayfulWorld"
    }
 ]

@@ -1,17 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
-import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hook/useTitle';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
    useTitle('ToyKingdom | Register');
 
-   const { registerUser, logout } = useContext(AuthContext)
+   const { registerUser, logout } = useContext(AuthContext);
    const [message, setMessage] = useState('');
    const navigate = useNavigate()
 
-   // console.log(updateProfileInfo)
+   // console.log(registerUser);
+   // console.log(logout);
 
 
 
@@ -38,11 +39,12 @@ const Register = () => {
 
 
 
-      form.reset();
+      // form.reset();
       registerUser(email, password)
-
          .then(result => {
+
             const loggedUser = result.user;
+            console.log(loggedUser)
             setMessage('Registation Sussessful')
             updeteUserProfile(loggedUser, userName, imageUrl)
 
@@ -54,7 +56,7 @@ const Register = () => {
          .catch(error => {
             console.error(error.message)
             setMessage(error.message)
-         })
+         });
 
 
       const updeteUserProfile = (loggedUser, userName, imageUrl) => {
@@ -75,7 +77,7 @@ const Register = () => {
          <div className='flex justify-center items-center'>
             <div >
                <h1 className="text-3xl font-bold my-3 ml-16">Register now!</h1>
-               <form onSubmit={handleRegister} className="card flex-shrink-0 w-96 max-w-sm shadow-md border border-sky-300 bg-base-100 my-5">
+               <form onSubmit={handleRegister} className="card flex-shrink-0 w-96 max-w-sm shadow-md border border-sky-300 mb-16 bg-zinc-100 p-5 m-5 rounded-md">
                   <div className="card-body">
                      <div className="form-control">
                         <label className="label">

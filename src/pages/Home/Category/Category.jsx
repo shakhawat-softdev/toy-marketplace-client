@@ -4,7 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import SubCategoryCard from './SubCategoryCard';
 
 const Category = ({ allDollFromDB }) => {
-   // console.log(allDollFromDB);
+
 
    const [babyDolls, setBabyDolls] = useState();
    const [barbieDolls, setBarbieDolls] = useState();
@@ -23,7 +23,7 @@ const Category = ({ allDollFromDB }) => {
 
 
    return (
-      <div className='mx-auto overflow-hidden max-w-7xl'>
+      <div className='mx-auto overflow-hidden max-w-7xl '>
          <Tabs>
             <TabList >
                <Tab >Baby Dolls</Tab>

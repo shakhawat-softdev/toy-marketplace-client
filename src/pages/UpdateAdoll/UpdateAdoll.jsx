@@ -47,7 +47,7 @@ const UpdateAdoll = () => {
       <div>
          <>
             <h1 className='text-3xl mt-3 text-center' ><span>Update A</span><span className='font-bold'> Toy</span></h1>
-            <form onSubmit={handleAddToy} className="bg-red-100 p-5 m-5" >
+            <form onSubmit={handleAddToy} className="bg-red-100 p-5 m-5 mb-30 mb-48 " >
                <div className="grid grid-cols-3 gap-5 p-5">
 
                   <div>

@@ -23,7 +23,6 @@ const Login = () => {
       const password = form.password.value;
 
 
-
       sinInUser(email, password)
          .then(resut => {
             // const loggedUser = resut.user;
@@ -56,9 +55,9 @@ const Login = () => {
 
 
    return (
-      <>
+      <div>
          <h1 className="text-3xl font-bold my-3 ml-4 text-center">Login now!</h1>
-         <div className='flex justify-center items-center text-center mb-5'>
+         <div className='flex justify-center items-center text-center mb-16 bg-zinc-100 p-5 m-5 rounded-md'>
             <section className="card flex-shrink-0 w-96 max-w-sm hadow-md border border-sky-300 bg-base-100 ">
                <div className='card-body'>
                   <form onSubmit={handleLogin} >
@@ -102,7 +101,7 @@ const Login = () => {
 
 
 
-      </>
+      </div>
    );
 };
 
