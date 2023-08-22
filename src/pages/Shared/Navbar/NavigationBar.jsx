@@ -11,19 +11,18 @@ const NavigationBar = () => {
          .catch()
    };
 
-   const loginLogout = <ul className="menu menu-horizontal px-1 text-white font-semibold">
-      {user ? <Link onClick={handleLogout}><li><span>Logout</span></li></Link> :
-         <Link to='/login'><li><span>Login</span></li></Link>}
-   </ul>
+   // const loginLogout = <ul className="menu menu-horizontal px-1 text-white font-semibold">
+   //    {user ? <Link onClick={handleLogout}><li><span>Logout</span></li></Link> :
+   //       <Link to='/login'><li><span>Login</span></li></Link>}
+   // </ul>
 
    const navItems = <ul className="menu menu-horizontal text-white font-semibold px-1">
       <Link to='/'><li><span>Home</span></li></Link>
-      <Link to='/allToys'><li><span>All Toys</span></li></Link>
-      {user && <>
+      <Link to='/allToys'><li><span>Instructors</span></li></Link>
+      <Link to='/addToy'><li><span>Add A Toy</span></li></Link>
+      <Link to='/myToys'><li><span>My Toys</span></li></Link>
 
-         <Link to='/addToy'><li><span>Add A Toy</span></li></Link>
-         <Link to='/myToys'><li><span>My Toys</span></li></Link>
-      </>}
+      {!user ? <Link to='/login'><li><span>Login</span></li></Link> : <li onClick={logout}><span>Logout</span></li>}
       <Link to='/blog'><li><span>Blogs</span></li></Link>
 
    </ul>
@@ -32,11 +31,11 @@ const NavigationBar = () => {
    const navItemsDropdown = <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <Link to='/'><li><span>Home</span></li></Link>
       {user && <>
-         <Link to='/allToys'><li><span>All Toys</span></li></Link>
+         <Link to='/allToys'><li><span>Instructors</span></li></Link>
          <Link to='/addToy'><li><span>Add A Toy</span></li></Link>
          <Link to='/myToys'><li><span>My Toys</span></li></Link>
       </>}
-      <Link to='/blog'><li><span>Blogs</span></li></Link>
+      {/* <Link to='/blog'><li><span>Blogs</span></li></Link> */}
    </ul>
 
 
@@ -64,7 +63,7 @@ const NavigationBar = () => {
             </div>
 
             <div className="navbar-end">
-               {loginLogout}
+               {/* {loginLogout} */}
                {user &&
                   <div className="dropdown dropdown-end">
                      <div className="btn btn-ghost btn-circle avatar tooltip tooltip-left tooltip-info" data-tip={`${user && user?.displayName}`}>
